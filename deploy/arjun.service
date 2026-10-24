@@ -1,0 +1,15 @@
+[Unit]
+Description=Arjun voice assistant (tray, wave overlay and voice engine)
+PartOf=graphical-session.target
+After=graphical-session.target pipewire.service openclaw-gateway.service
+
+[Service]
+# Adjust to where this repo is checked out
+WorkingDirectory=%h/Documents/Projects/arjun-voice
+EnvironmentFile=-%h/.config/arjun/arjun.env
+ExecStart=/usr/bin/python3 -u arjun_app.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target

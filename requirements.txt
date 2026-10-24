@@ -1,0 +1,13 @@
+# Python 3.11 venv at .venv (arjun_app.py itself runs on the system python3 with GTK bindings).
+# torch from the CUDA 12.8 index: uv pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.8.0+cu128
+faster-whisper==1.2.1
+silero-vad==6.2.3
+sounddevice==0.5.6
+numpy==2.4.6
+scipy==1.17.1
+websockets==17.3
+# arjun_voice.py (older pipeline: openWakeWord -> Whisper -> OpenClaw -> Kokoro)
+kokoro==0.9.4
+openwakeword==0.6.0
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
